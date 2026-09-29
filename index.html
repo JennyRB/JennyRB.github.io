@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Your Name] | Graduate Student in [Field]</title>
+<meta name="description" content="Portfolio of [Your Name], graduate student in [Field].">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --text: #1c1917;
+    --muted: #57534e;
+    --border: #e7e5e4;
+    --accent: #2563eb;
+    --accent-soft: #dbeafe;
+    --radius: 14px;
+    --max: 960px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0a09;
+      --surface: #1c1917;
+      --text: #f5f5f4;
+      --muted: #a8a29e;
+      --border: #292524;
+      --accent: #60a5fa;
+      --accent-soft: #1e3a5f;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Nav */
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0.9rem 1.25rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .brand { font-weight: 700; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  nav a { color: var(--muted); font-size: 0.95rem; font-weight: 500; }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+
+  /* Hero */
+  .hero { padding: 5rem 0 3.5rem; }
+  .eyebrow {
+    display: inline-block; font-size: 0.85rem; font-weight: 600;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 0.3rem 0.8rem; border-radius: 999px; margin-bottom: 1.25rem;
+  }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin-bottom: 2rem; }
+  .btn {
+    display: inline-block; padding: 0.75rem 1.4rem; border-radius: 10px;
+    font-weight: 600; font-size: 0.95rem; margin-right: 0.6rem; margin-bottom: 0.6rem;
+  }
+  .btn:hover { text-decoration: none; opacity: 0.9; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); background: var(--surface); }
+
+  /* Sections */
+  section { padding: 3.5rem 0; }
+  section h2 { font-size: 1.75rem; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+  .section-sub { color: var(--muted); margin-bottom: 2rem; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  .about-grid p { margin-bottom: 1rem; color: var(--muted); }
+  .facts {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.5rem; list-style: none;
+  }
+  .facts li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+  .facts li:last-child { border-bottom: none; }
+  .facts strong { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.5rem;
+  }
+  .card h3 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag {
+    font-size: 0.85rem; padding: 0.3rem 0.75rem; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); font-weight: 500;
+  }
+
+  /* Projects */
+  .projects { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  .project { display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s; }
+  .project:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .project .meta { font-size: 0.8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .project h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .project p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; flex: 1; }
+  .project .links { margin-top: 1rem; font-size: 0.9rem; font-weight: 600; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* Contact */
+  .contact-card { text-align: center; padding: 2.5rem 1.5rem; }
+  .contact-card p { color: var(--muted); max-width: 520px; margin: 0.5rem auto 1.5rem; }
+  .contact-links { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+
+  footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+
+  /* Larger screens */
+  @media (min-width: 720px) {
+    .about-grid { grid-template-columns: 2fr 1fr; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .projects { grid-template-columns: repeat(2, 1fr); }
+    .hero { padding: 7rem 0 4.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .project { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">[Your Name]</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <span class="eyebrow">[Degree, e.g. PhD Candidate] · [Field]</span>
+      <h1>Hi, I'm [Your Name].</h1>
+      <p class="lead">I'm a graduate student at [University] studying [Field]. My work focuses on [one-sentence description of your research focus].</p>
+      <a class="btn btn-primary" href="#projects">View my research</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="section-sub">A little about who I am and what I work on.</p>
+      <div class="about-grid">
+        <div>
+          <p>[Paragraph 1: Who you are, your program, and your university. Mention your advisor or lab if relevant.]</p>
+          <p>[Paragraph 2: Your research interests and the questions that drive you.]</p>
+          <p>[Paragraph 3: Background, prior education or experience, and what you're looking for next, such as collaborations, internships, or postdoc opportunities.]</p>
+        </div>
+        <ul class="facts">
+          <li><strong>Currently</strong>[Degree] at [University]</li>
+          <li><strong>Focus</strong>[Research area]</li>
+          <li><strong>Previously</strong>[Prior degree, institution]</li>
+          <li><strong>Location</strong>[City, Country]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <p class="section-sub">Tools and methods I use in my work.</p>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Technical</h3>
+          <div class="tags">
+            <span class="tag">[Skill 1]</span><span class="tag">[Skill 2]</span>
+            <span class="tag">[Skill 3]</span><span class="tag">[Skill 4]</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Research Methods</h3>
+          <div class="tags">
+            <span class="tag">[Method 1]</span><span class="tag">[Method 2]</span>
+            <span class="tag">[Method 3]</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Software &amp; Tools</h3>
+          <div class="tags">
+            <span class="tag">[Tool 1]</span><span class="tag">[Tool 2]</span>
+            <span class="tag">[Tool 3]</span><span class="tag">[Tool 4]</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Communication</h3>
+          <div class="tags">
+            <span class="tag">Scientific writing</span><span class="tag">Teaching</span>
+            <span class="tag">Presentations</span><span class="tag">[Languages]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research / Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Research &amp; Projects</h2>
+      <p class="section-sub">Selected work, publications, and ongoing projects.</p>
+      <div class="projects">
+        <article class="card project">
+          <div class="meta">[Year] · [Thesis / Publication / Project]</div>
+          <h3>[Project Title 1]</h3>
+          <p>[2–3 sentences: the question, your approach, and the result or current status.]</p>
+          <div class="tags"><span class="tag">[Keyword]</span><span class="tag">[Keyword]</span></div>
+          <div class="links"><a href="#">Paper</a><a href="#">Code</a><a href="#">Poster</a></div>
+        </article>
+        <article class="card project">
+          <div class="meta">[Year] · [Type]</div>
+          <h3>[Project Title 2]</h3>
+          <p>[2–3 sentences describing the project and your specific contribution.]</p>
+          <div class="tags"><span class="tag">[Keyword]</span><span class="tag">[Keyword]</span></div>
+          <div class="links"><a href="#">Details</a><a href="#">Code</a></div>
+        </article>
+        <article class="card project">
+          <div class="meta">[Year] · [Type]</div>
+          <h3>[Project Title 3]</h3>
+          <p>[2–3 sentences describing the project and outcomes.]</p>
+          <div class="tags"><span class="tag">[Keyword]</span><span class="tag">[Keyword]</span></div>
+          <div class="links"><a href="#">Details</a></div>
+        </article>
+        <article class="card project">
+          <div class="meta">[Year] · [Type]</div>
+          <h3>[Project Title 4]</h3>
+          <p>[2–3 sentences describing the project and outcomes.]</p>
+          <div class="tags"><span class="tag">[Keyword]</span><span class="tag">[Keyword]</span></div>
+          <div class="links"><a href="#">Details</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="card contact-card">
+        <h2>Let's connect</h2>
+        <p>I'm open to collaborations, questions about my research, and new opportunities. The best way to reach me is by email.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:you@university.edu">you@university.edu</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 [Your Name] · [University]</div>
+</footer>
+
+</body>
+</html>
