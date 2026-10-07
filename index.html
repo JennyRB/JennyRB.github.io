@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jenny Richmond-Bravo | Program Coordinator & Career Development Practitioner</title>
-  <meta name="description" content="Portfolio of Jenny Richmond-Bravo, program coordinator and career development practitioner.">
+  <title>Jenny Richmond-Bravo, EdD | Program Leader & Career Developer</title>
+  <meta name="description" content="Portfolio of Jenny Richmond-Bravo, EdD, a program leader and career developer in post-secondary education, specializing in experiential learning, professional development, and career education.">
   <style>
     :root {
-      --bg: #fbfaf8;
+      --bg: #fbf9fd;
       --surface: #ffffff;
-      --text: #22262b;
-      --muted: #5f6770;
-      --accent: #1f6f6b;
-      --accent-soft: #e3f0ef;
-      --border: #e6e3de;
+      --text: #231f2b;
+      --muted: #635d70;
+      --accent: #6b3fa0;
+      --accent-soft: #efe8f7;
+      --border: #e7e1ee;
       --radius: 14px;
       --max: 1040px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #14181b;
-        --surface: #1c2125;
-        --text: #eceae6;
-        --muted: #a2a9b0;
-        --accent: #5fc1ba;
-        --accent-soft: #1f3331;
-        --border: #2b3238;
+        --bg: #15131a;
+        --surface: #1e1b26;
+        --text: #ece9f1;
+        --muted: #a9a3b6;
+        --accent: #b794f4;
+        --accent-soft: #2d2342;
+        --border: #302b3c;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +64,7 @@
     /* Hero */
     .hero { padding: 5.5rem 0 4rem; }
     .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); margin-bottom: 0.8rem; }
-    .hero .role { font-size: clamp(1.05rem, 2.5vw, 1.3rem); color: var(--muted); max-width: 52ch; margin-bottom: 1.8rem; }
+    .hero .role { font-size: clamp(1.05rem, 2.5vw, 1.3rem); color: var(--muted); max-width: 56ch; margin-bottom: 1.8rem; }
     .btn {
       display: inline-block; padding: 0.75rem 1.4rem; border-radius: 999px;
       font-weight: 600; text-decoration: none; font-size: 0.95rem;
@@ -75,7 +75,7 @@
     .btn-ghost { color: var(--accent); margin-left: 0.5rem; }
 
     /* About */
-    .about-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; }
+    .about-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; margin-top: 1.25rem; }
     .about-text p + p { margin-top: 1rem; }
     .photo {
       width: 180px; height: 180px; border-radius: 50%;
@@ -86,6 +86,16 @@
     }
     .facts { list-style: none; margin-top: 1.5rem; display: grid; gap: 0.5rem; color: var(--muted); font-size: 0.95rem; }
     .facts strong { color: var(--text); }
+    .subhead { font-size: 1.15rem; margin: 2.25rem 0 0.75rem; }
+    .timeline { list-style: none; border-left: 2px solid var(--border); padding-left: 1.25rem; display: grid; gap: 1.1rem; }
+    .timeline li { position: relative; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -1.62rem; top: 0.55rem;
+      width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
+    }
+    .timeline .when { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+    .timeline .what { font-weight: 600; }
+    .timeline .where { color: var(--muted); font-size: 0.93rem; }
 
     /* Cards */
     .grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
@@ -95,6 +105,8 @@
     }
     .card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
     .card p { color: var(--muted); font-size: 0.97rem; }
+    .card p + p { margin-top: 0.7rem; }
+    .card .link { display: inline-block; margin-top: 0.9rem; font-size: 0.92rem; font-weight: 600; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; list-style: none; }
     .tags li {
       background: var(--accent-soft); color: var(--accent);
@@ -103,6 +115,9 @@
     .skill-list { list-style: none; display: grid; gap: 0.45rem; color: var(--muted); font-size: 0.97rem; }
     .skill-list li::before { content: "✓"; color: var(--accent); font-weight: 700; margin-right: 0.6rem; }
     .meta { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
+    .cred-list { list-style: none; display: grid; gap: 0.6rem; margin-top: 1.25rem; }
+    .cred-list li { color: var(--muted); font-size: 0.95rem; padding-left: 1rem; border-left: 3px solid var(--accent-soft); }
+    .cred-list strong { color: var(--text); }
 
     /* Contact */
     .contact-card { text-align: center; padding: 2.5rem 1.5rem; }
@@ -130,7 +145,7 @@
 
   <header>
     <div class="container nav">
-      <a class="brand" href="#top">Jenny Richmond-Bravo</a>
+      <a class="brand" href="#top">Jenny Richmond-Bravo, EdD</a>
       <nav aria-label="Main">
         <ul>
           <li><a href="#about">About</a></li>
@@ -147,8 +162,8 @@
     <div class="hero">
       <div class="container">
         <p class="eyebrow">Portfolio</p>
-        <h1>Jenny Richmond-Bravo</h1>
-        <p class="role">Program coordinator and career development practitioner helping people build meaningful pathways to work, learning, and growth.</p>
+        <h1>Jenny Richmond-Bravo, EdD</h1>
+        <p class="role">Program leader, career developer, and scholar-practitioner in post-secondary education, building experiential and transformative learning opportunities that connect learning to meaningful careers.</p>
         <a class="btn btn-primary" href="#projects">View my work</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
@@ -158,16 +173,49 @@
     <section id="about">
       <div class="container">
         <p class="eyebrow">About</p>
-        <h2>Connecting people with possibility</h2>
+        <h2>Bridging learning and practice</h2>
         <div class="about-grid">
           <div class="photo" aria-hidden="true">JR</div>
           <div class="about-text">
-            <p>[Write a short opening about who you are and what drives your work. For example: I am a program coordinator and career development practitioner who designs and delivers programs that help clients and students clarify goals, build confidence, and take their next step.]</p>
-            <p>[Add a second paragraph about your experience, the populations you serve, your approach or philosophy, and the kinds of organizations you've worked with.]</p>
+            <p>I am an educational leader with over 10 years of experience in experiential learning, professional development, and career education across post-secondary and community settings. I love building impactful partnerships and developing innovative programs that bridge learning and practice, and I am committed to equitable, accessible, and transformative learning opportunities.</p>
+            <p>My work supports and mobilizes emerging leaders to pursue meaningful careers and make impactful contributions in their communities and institutions. Today, I lead graduate professional development at Western University, helping doctoral and graduate students recognize the value of their skills for careers within and beyond academia.</p>
             <ul class="facts">
-              <li><strong>Based in:</strong> [City, Province/State]</li>
-              <li><strong>Education:</strong> [Degree, Institution]</li>
-              <li><strong>Credentials:</strong> [e.g., CDP, certifications]</li>
+              <li><strong>Based in:</strong> London, Ontario, Canada</li>
+              <li><strong>Current role:</strong> Graduate Professional Development Coordinator, Western University</li>
+              <li><strong>Education:</strong> EdD, Educational Leadership, Western University (2025)</li>
+            </ul>
+
+            <h3 class="subhead">Education &amp; credentials</h3>
+            <ul class="cred-list">
+              <li><strong>Doctor of Education (EdD), Educational Leadership</strong> · Western University, 2022–2025</li>
+              <li><strong>Leader Character Practitioner Certificate</strong> · Ian O. Ihnatowycz Institute for Leadership, Ivey Business School, 2025</li>
+              <li><strong>Western University Emerging Leaders Program</strong> · Ivey Business School Executive Education, 2026</li>
+              <li><strong>Operational Excellence Program Certificate of Achievement</strong> · Western University, 2026</li>
+              <li><strong>BA, Summa Cum Laude</strong> · York University, 2009</li>
+            </ul>
+
+            <h3 class="subhead">Career path</h3>
+            <ul class="timeline">
+              <li>
+                <span class="when">Aug 2024 – Present</span>
+                <div class="what">Graduate Professional Development Coordinator</div>
+                <div class="where">School of Graduate and Postdoctoral Studies, Western University</div>
+              </li>
+              <li>
+                <span class="when">Feb 2021 – Aug 2024</span>
+                <div class="what">Experiential Learning Coordinator and King's Promise Developer</div>
+                <div class="where">King's University College at Western University</div>
+              </li>
+              <li>
+                <span class="when">Dec 2019 – Feb 2021</span>
+                <div class="what">Education Program Coordinator</div>
+                <div class="where">Insurance Brokers Association of Ontario</div>
+              </li>
+              <li>
+                <span class="when">Jul 2018 – Aug 2019</span>
+                <div class="what">Director of Student Services (Contract)</div>
+                <div class="where">Randolph College for the Performing Arts</div>
+              </li>
             </ul>
           </div>
         </div>
@@ -179,33 +227,33 @@
       <div class="container">
         <p class="eyebrow">Skills</p>
         <h2>What I bring</h2>
-        <p class="section-intro">A blend of program management, client-centred practice, and communication skills.</p>
+        <p class="section-intro">A blend of program leadership, career education, and partnership building, grounded in research and a commitment to equity.</p>
         <div class="grid cols-3">
           <div class="card">
-            <h3>Career Development</h3>
+            <h3>Career &amp; Professional Development</h3>
             <ul class="skill-list">
-              <li>One-to-one career coaching</li>
-              <li>Resume and interview coaching</li>
-              <li>Career assessment tools</li>
-              <li>Workshop facilitation</li>
+              <li>Career development and education</li>
+              <li>Workshop and event facilitation</li>
+              <li>Adult education</li>
+              <li>Graduate and doctoral professional development</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Program Coordination</h3>
+            <h3>Program Leadership</h3>
             <ul class="skill-list">
-              <li>Program planning and delivery</li>
-              <li>Scheduling and logistics</li>
-              <li>Stakeholder and partner relations</li>
-              <li>Reporting and evaluation</li>
+              <li>Program development and coordination</li>
+              <li>Experiential and work-integrated learning</li>
+              <li>Partnership and community development</li>
+              <li>Change management</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Tools and Strengths</h3>
+            <h3>Leadership &amp; Scholarship</h3>
             <ul class="skill-list">
-              <li>Microsoft 365 / Google Workspace</li>
-              <li>Data tracking and case management</li>
-              <li>Clear written communication</li>
-              <li>Equity-minded, inclusive practice</li>
+              <li>Higher education leadership</li>
+              <li>Leader character development</li>
+              <li>Educational research and literature review</li>
+              <li>Equity, diversity, inclusion, and Indigenization (EDII)</li>
             </ul>
           </div>
         </div>
@@ -217,31 +265,36 @@
       <div class="container">
         <p class="eyebrow">Research &amp; Projects</p>
         <h2>Selected work</h2>
-        <p class="section-intro">A few programs, initiatives, and research projects I'm proud of.</p>
+        <p class="section-intro">Programs I have built and research I have contributed to, all focused on helping students move from learning to meaningful careers.</p>
         <div class="grid cols-2">
           <article class="card">
-            <p class="meta">[Year] · [Organization]</p>
-            <h3>[Project Title One]</h3>
-            <p>[Describe the goal, your role, what you did, and the outcome. Include a result if you can, such as participants served or satisfaction rates.]</p>
-            <ul class="tags"><li>Program Design</li><li>Facilitation</li></ul>
+            <p class="meta">2024 – Present · Western University</p>
+            <h3>Own Your Future</h3>
+            <p>I develop and coordinate Western's professional development program for graduate and doctoral students. The program helps students recognize and articulate the value of their graduate training for careers within and beyond academia, across five pillars: career engagement, communication and relationship building, leadership, teaching and learning, and thriving.</p>
+            <p>Recent work includes partnering with the Office of Indigenous Initiatives on two digital badge pathways in Indigenous allyship, and with Strengths at Western on a CliftonStrengths workshop series.</p>
+            <a class="link" href="https://uwo.ca/ownyourfuture/index.html" target="_blank" rel="noopener">Visit the program website →</a>
+            <ul class="tags"><li>Program Development</li><li>Partnerships</li><li>Graduate Education</li></ul>
           </article>
           <article class="card">
-            <p class="meta">[Year] · [Organization]</p>
-            <h3>[Project Title Two]</h3>
-            <p>[Describe the project, who it served, and the impact it had.]</p>
-            <ul class="tags"><li>Career Coaching</li><li>Partnerships</li></ul>
+            <p class="meta">2021 – 2024 · King's University College</p>
+            <h3>King's Promise &amp; King's Job Shadow</h3>
+            <p>I developed and coordinated career readiness programs for undergraduate students. King's Job Shadow paired students with partner organizations for one to two days of shadowing in roles that interested them, giving them a firsthand look at everyday tasks and expectations.</p>
+            <p>I built relationships with internal and external partners to offer experiential and work-integrated learning, and facilitated workshops, information sessions, and networking events.</p>
+            <ul class="tags"><li>Experiential Learning</li><li>Career Readiness</li><li>Employer Relations</li></ul>
           </article>
           <article class="card">
-            <p class="meta">[Year] · [Institution]</p>
-            <h3>[Research Project Title]</h3>
-            <p>[Summarize your research question, methods, and key findings. Add a link to a publication or presentation if available.]</p>
-            <ul class="tags"><li>Research</li><li>Evaluation</li></ul>
+            <p class="meta">2025 · Western University</p>
+            <h3>Mobilizing Doctoral Students for Impactful Careers Beyond Academia</h3>
+            <p>My doctoral dissertation-in-practice examines how to increase doctoral student engagement with non-academic career development. It frames career development as a sustainable development concern, connecting students' skills to the UN Sustainable Development Goals, and introduces the CARES framework to guide organizational change.</p>
+            <a class="link" href="#contact">Read the dissertation (link to be added) →</a>
+            <ul class="tags"><li>Doctoral Research</li><li>Change Management</li><li>Transformative Learning</li></ul>
           </article>
           <article class="card">
-            <p class="meta">[Year] · [Organization]</p>
-            <h3>[Project Title Four]</h3>
-            <p>[Describe the project and your contribution.]</p>
-            <ul class="tags"><li>Workshops</li><li>Outreach</li></ul>
+            <p class="meta">2024 · Canadian Journal for New Scholars in Education</p>
+            <h3>Exploring Trends in BIPOC Student Engagement: A Review of the Literature</h3>
+            <p>A co-authored literature review investigating why student engagement differs between BIPOC students and their White peers in Canadian higher education. The findings point to the importance of faculty representation, on-campus work opportunities, and alternative transit options.</p>
+            <a class="link" href="#contact">Read the article (link to be added) →</a>
+            <ul class="tags"><li>Publication</li><li>Student Engagement</li><li>Equity</li></ul>
           </article>
         </div>
       </div>
@@ -253,10 +306,10 @@
         <div class="card contact-card">
           <p class="eyebrow">Contact</p>
           <h2>Let's connect</h2>
-          <p class="section-intro" style="margin: 0.5rem auto 0;">Interested in working together or learning more about my work? I'd love to hear from you.</p>
+          <p class="section-intro" style="margin: 0.5rem auto 0;">Interested in collaborating on career education, experiential learning, or graduate professional development? I'd love to hear from you.</p>
           <div class="contact-links">
             <a class="btn btn-primary" href="mailto:your.email@example.com">Email me</a>
-            <a class="btn" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://www.linkedin.com/in/jennyrichmondbravo/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
