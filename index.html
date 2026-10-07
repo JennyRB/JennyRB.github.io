@@ -75,15 +75,9 @@
     .btn-ghost { color: var(--accent); margin-left: 0.5rem; }
 
     /* About */
-    .about-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; margin-top: 1.25rem; }
+    .about-grid { margin-top: 1.25rem; }
+    .about-text { max-width: 70ch; text-align: left; }
     .about-text p + p { margin-top: 1rem; }
-    .photo {
-      width: 180px; height: 180px; border-radius: 50%;
-      background: var(--accent-soft); color: var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      font-family: Georgia, serif; font-size: 3rem; font-weight: 600;
-      border: 1px solid var(--border);
-    }
     .facts { list-style: none; margin-top: 1.5rem; display: grid; gap: 0.5rem; color: var(--muted); font-size: 0.95rem; }
     .facts strong { color: var(--text); }
     .subhead { font-size: 1.15rem; margin: 2.25rem 0 0.75rem; }
@@ -120,13 +114,12 @@
     .cred-list strong { color: var(--text); }
 
     /* Contact */
-    .contact-card { text-align: center; padding: 2.5rem 1.5rem; }
-    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
+    .contact-card { text-align: left; padding: 2.5rem 1.5rem; }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.75rem; margin-top: 1.5rem; }
 
-    footer { padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+    footer { padding: 2rem 0; text-align: left; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
 
     @media (min-width: 720px) {
-      .about-grid { grid-template-columns: 200px 1fr; }
       .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
       .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
     }
@@ -175,7 +168,6 @@
         <p class="eyebrow">About</p>
         <h2>Bridging learning and practice</h2>
         <div class="about-grid">
-          <div class="photo" aria-hidden="true">JR</div>
           <div class="about-text">
             <p>I am an educational leader with over 10 years of experience in experiential learning, professional development, and career education across post-secondary and community settings. I love building impactful partnerships and developing innovative programs that bridge learning and practice, and I am committed to equitable, accessible, and transformative learning opportunities.</p>
             <p>My work supports and mobilizes emerging leaders to pursue meaningful careers and make impactful contributions in their communities and institutions. Today, I lead graduate professional development at Western University, helping doctoral and graduate students recognize the value of their skills for careers within and beyond academia.</p>
@@ -306,7 +298,7 @@
         <div class="card contact-card">
           <p class="eyebrow">Contact</p>
           <h2>Let's connect</h2>
-          <p class="section-intro" style="margin: 0.5rem auto 0;">Interested in collaborating on career education, experiential learning, or graduate professional development? I'd love to hear from you.</p>
+          <p class="section-intro" style="margin: 0.5rem 0 0;">Interested in collaborating on career education, experiential learning, or graduate professional development? I'd love to hear from you.</p>
           <div class="contact-links">
             <a class="btn btn-primary" href="mailto:your.email@example.com">Email me</a>
             <a class="btn" href="https://www.linkedin.com/in/jennyrichmondbravo/" target="_blank" rel="noopener">LinkedIn</a>
