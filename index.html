@@ -126,6 +126,8 @@
       .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 560px) {
+      html { scroll-padding-top: 100px; }
+      .nav { flex-wrap: wrap; height: auto; padding-top: 0.6rem; padding-bottom: 0.6rem; row-gap: 0.2rem; }
       nav ul { gap: 0.9rem; }
       nav a { font-size: 0.85rem; }
       .btn-ghost { margin-left: 0; margin-top: 0.6rem; }
@@ -145,7 +147,8 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#research">Research</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -159,7 +162,7 @@
         <p class="eyebrow">Portfolio</p>
         <h1>Jenny Richmond-Bravo, EdD</h1>
         <p class="role">Program leader, career developer, and scholar-practitioner in post-secondary education, building experiential and transformative learning opportunities that connect learning to meaningful careers.</p>
-        <a class="btn btn-primary" href="#projects">View my work</a>
+        <a class="btn btn-primary" href="#programs">View my work</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
@@ -245,12 +248,12 @@
       </div>
     </section>
 
-    <!-- Research / Projects -->
-    <section id="projects">
+    <!-- Programs Supported -->
+    <section id="programs">
       <div class="container">
-        <p class="eyebrow">Research &amp; Projects</p>
-        <h2>Selected work</h2>
-        <p class="section-intro">Programs I have built and research I have contributed to, all focused on helping students move from learning to meaningful careers.</p>
+        <p class="eyebrow">Programs</p>
+        <h2>Programs Supported</h2>
+        <p class="section-intro">Programs I have developed and coordinated to help students move from learning to meaningful careers.</p>
         <div class="grid cols-2">
           <article class="card">
             <p class="meta">2024 – Present · Western University</p>
@@ -267,6 +270,17 @@
             <p>I built relationships with industry partners through the local Chamber of Commerce, non-profit networks, and municipal economic development teams, monitored and reported on student participation in experiential learning, and co-chaired the King's Career Education Working Group while participating in Western's Work-Integrated Learning Working Group.</p>
             <ul class="tags"><li>Experiential Learning</li><li>Career Readiness</li><li>Employer Relations</li></ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Publications -->
+    <section id="research">
+      <div class="container">
+        <p class="eyebrow">Research</p>
+        <h2>Research &amp; Publications</h2>
+        <p class="section-intro">Scholarship on doctoral career development and student engagement in Canadian higher education.</p>
+        <div class="grid cols-2">
           <article class="card">
             <p class="meta">2025 · Western University</p>
             <h3>Mobilizing Doctoral Students for Impactful Careers Beyond Academia</h3>
