@@ -103,6 +103,11 @@
     .card p { color: var(--muted); font-size: 1.075rem; }
     .card p + p { margin-top: 0.7rem; }
     .card .link { display: inline-block; margin-top: 0.9rem; font-size: 1.025rem; font-weight: 600; }
+    .card h3.featured-title { font-size: clamp(1.5rem, 4vw, 1.65rem); color: var(--text); margin-bottom: 0.3rem; }
+    .stats { display: flex; flex-direction: column; gap: 0.5rem; list-style: none; margin: 0.25rem 0 1.1rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--border); }
+    .stats li { display: flex; flex-direction: row; align-items: baseline; gap: 0.6rem; }
+    .stats .num { font-size: 1.4rem; font-weight: 600; color: var(--text); line-height: 1.1; }
+    .stats .label { font-size: 0.9rem; color: var(--muted); }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; list-style: none; }
     .tags li {
       background: var(--accent-soft); color: var(--accent);
@@ -110,10 +115,10 @@
     }
     .skill-list { list-style: none; display: grid; gap: 0.45rem; color: var(--muted); font-size: 1.075rem; }
     .skill-list li::before { content: "✓"; color: var(--accent); font-weight: 700; margin-right: 0.6rem; }
-    .meta { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
+    .meta { font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
     .cred-list { list-style: none; display: grid; gap: 0.6rem; margin-top: 1.25rem; }
     .subhead + .cred-list { margin-top: 0; }
-    .cred-list li { color: var(--muted); font-size: 0.95rem; padding-left: 1rem; border-left: 3px solid var(--accent-soft); }
+    .cred-list li { color: var(--muted); font-size: 1.075rem; padding-left: 1rem; border-left: 3px solid var(--accent-soft); }
     .cred-list strong { color: var(--text); }
 
     /* Contact */
@@ -257,10 +262,18 @@
         <p class="section-intro">Programs I have developed and coordinated to help students move from learning to meaningful careers.</p>
         <div class="grid cols-2">
           <article class="card">
-            <p class="meta">2024 – Present · Western University</p>
             <h3>Own Your Future</h3>
-            <p>I develop, coordinate, and facilitate Western's professional development program for graduate and doctoral students. The program helps students recognize and articulate the value of their graduate training for careers within and beyond academia, across five pillars: career engagement, communication and relationship building, leadership, teaching and learning, and thriving.</p>
-            <p>I partner with subject matter experts, faculty, staff, and senior leaders, and manage budget, curriculum, scheduling, marketing, the program website, and online learning modules. Recent work includes two digital badge pathways in Indigenous allyship with the Office of Indigenous Initiatives, and a CliftonStrengths workshop series with Strengths at Western.</p>
+            <p class="meta">2024 – Present · Western University</p>
+            <ul class="skill-list">
+              <li>$30K annual budget</li>
+              <li>~500 students engaged annually</li>
+              <li>15+ cross-campus partnerships with subject matter experts, faculty, staff, and senior leaders</li>
+              <li>Professional development for graduate and doctoral students, helping them articulate the value of their training for careers within and beyond academia</li>
+              <li>Five program pillars: career engagement, communication and relationship building, leadership, teaching and learning, and thriving</li>
+              <li>Management of curriculum, scheduling, marketing, website, and online learning modules</li>
+              <li>Two new digital badge pathways in Indigenous allyship, developed with the Office of Indigenous Initiatives</li>
+              <li>CliftonStrengths workshop series, in partnership with Strengths at Western</li>
+            </ul>
             <a class="link" href="https://uwo.ca/ownyourfuture/index.html" target="_blank" rel="noopener">Visit the program website →</a>
             <ul class="tags"><li>Program Development</li><li>Partnerships</li><li>Graduate Education</li></ul>
           </article>
